@@ -18,3 +18,7 @@ inoremap {<CR> {<CR>}<Esc>ko<Tab>
 
 "leader"
 noremap <Leader>p "+p
+noremap <Leader>j <C-w>j
+noremap <Leader>k <C-w>k
+noremap <Leader>h <C-w>h
+noremap <Leader>l <C-w>l

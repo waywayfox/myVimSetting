@@ -15,6 +15,9 @@ set ai
 set nowrap
 set showcmd
 set scrolloff=5
+colorscheme gruvbox
+
+set background=dark
 
 " space and tab
 set softtabstop=2
@@ -71,6 +74,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
 Plug 'tomtom/tcomment_vim'
+Plug 'mileszs/ack.vim'
+
 
 " Initialize plugin system
 call plug#end()
