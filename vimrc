@@ -5,7 +5,7 @@ let mapleader = ","
 set number
 set noshowmode
 set history=1000
-set clipboard=unnamedplus
+set clipboard=unnamed
 set cursorline
 set noswapfile
 set ruler
@@ -79,5 +79,4 @@ Plug 'mileszs/ack.vim'
 
 " Initialize plugin system
 call plug#end()
-
 

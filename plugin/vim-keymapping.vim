@@ -18,6 +18,8 @@ inoremap {<CR> {<CR>}<Esc>ko<Tab>
 
 "leader"
 noremap <Leader>p "+p
+" noremap <Leader>yy "+yy
+" noremap <Leader>y "+y
 nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 nnoremap <Leader>h <C-w>h
@@ -25,3 +27,5 @@ nnoremap <Leader>l <C-w>l
 nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
 
+inoremap <c-u> <esc>viwU
+nnoremap <c-u> viwU
