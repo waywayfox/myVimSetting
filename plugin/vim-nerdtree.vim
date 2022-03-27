@@ -12,4 +12,4 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 " autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " Start NERDTree and leave the cursor in it.
-" autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree
