@@ -10,7 +10,7 @@ set cursorline
 set noswapfile
 set ruler
 " auto indent
-set ai
+set autoindent
 "太長時不換行
 set nowrap
 set showcmd
@@ -47,10 +47,10 @@ filetype on
 filetype indent on
 filetype plugin on
 
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
 
-autocmd BufWritePre * :%s/\s\+$//e
+
+
+
 
 call plug#begin()
 " The default plugin directory will be as follows:
@@ -73,7 +73,7 @@ Plug 'tpope/vim-surround'
 
 Plug 'tpope/vim-repeat'
 
-Plug 'tomtom/tcomment_vim'
+"Plug 'tomtom/tcomment_vim'
 Plug 'mileszs/ack.vim'
 
 
