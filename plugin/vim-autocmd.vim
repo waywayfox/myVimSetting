@@ -3,6 +3,7 @@
 augroup basic_group
   autocmd WinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
+  " %代表所有行，e代表不顯示錯誤。
   autocmd BufWritePre * :%s/\s\+$//e
 augroup END
 " }}}
@@ -30,37 +31,18 @@ augroup filetype_javascript
   autocmd!
   autocmd FileType javascript :let maplocalleader='_'
   autocmd FileType javascript :nnoremap <buffer> <localleader>/ I//<esc>
+  autocmd FileType javascript :vnoremap <buffer> <localleader>/ :normal! I// <esc>
+  "react jsx comment
+  autocmd FileType javascript :nnoremap <buffer> <localleader>r/ I{/**<esc>A**/}<esc>
+  autocmd FileType javascript :vnoremap <buffer> <localleader>r/ I<CR><Up>{/***<esc>`>o***/}<esc>
+
+
+
+
+ "react snippets"
+autocmd FileType javascript :iabbrev rce import { Component } from "react<esc>A;<CR><CR> export default class $CFN extends Component {<CR> constuctor(props) {<CR> super(props)<CR><CR> this.state = {}<CR> }<CR><CR> render() {<CR> return null<CR> }<CR> }
+autocmd FileType javascript :iabbrev rim import { Component } from "react<esc>A;<esc>
+
 augroup END
 " }}}
-
-" FileType HTML autogroup {{{
-augroup filetype_html
-  autocmd!
-  autocmd FileType html :let maplocalleader='\\'
-  "fold a tag"
-  autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
-augroup END
-"}}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

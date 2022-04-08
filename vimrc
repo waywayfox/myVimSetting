@@ -77,6 +77,9 @@ Plug 'tpope/vim-repeat'
 Plug 'mileszs/ack.vim'
 
 
+"Plug 'SirVer/ultisnips'
+"Plug 'mlaursen/vim-react-snippets'
+
 " Initialize plugin system
 call plug#end()
 

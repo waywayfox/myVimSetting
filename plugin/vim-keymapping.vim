@@ -9,12 +9,12 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " 自動補完括號
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
-inoremap ` ``<Esc>i
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap {<CR> {<CR>}<Esc>ko<Tab>
+"inoremap " ""<Esc>i
+"inoremap ' ''<Esc>i
+"inoremap ` ``<Esc>i
+"inoremap ( ()<Esc>i
+"inoremap [ []<Esc>i
+"inoremap {<CR> {<CR>}<Esc>ko<Tab>
 
 "leader"
 noremap <Leader>p "+p
@@ -29,3 +29,10 @@ nnoremap <Leader>sv :source $MYVIMRC<cr>
 
 inoremap <c-u> <esc>viwU
 nnoremap <c-u> viwU
+
+" stop highlight
+nnoremap <Leader>/ :noh<cr>
+
+
+" use very magic
+:nnoremap / /\v
