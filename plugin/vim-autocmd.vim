@@ -12,7 +12,8 @@ augroup END
 augroup filetype_vim
   autocmd!
   autocmd FileType vim :let maplocalleader='\\'
-  autocmd FileType vim :nnoremap <buffer> <leader>/ I"<esc>
+  autocmd FileType vim :nnoremap <buffer> <localleader>/ I"<esc>
+  autocmd FileType vim :vnoremap <buffer> <localleader>/ :normal! I" <esc>
   autocmd FileType vim :setlocal foldmethod=marker
   autocmd FileType vim :setlocal foldlevelstart=0
 augroup END

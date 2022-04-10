@@ -36,3 +36,16 @@ nnoremap <Leader>/ :noh<cr>
 
 " use very magic
 :nnoremap / /\v
+
+
+
+" grep
+" :nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 10<cr>
+:nnoremap <leader>q :copen<cr>
+:nnoremap <leader>Q :cclose<cr>
+:nnoremap <leader>c :cnext<cr>
+:nnoremap <leader>C :cprevious<cr>
+
+
+
+
