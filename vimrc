@@ -47,7 +47,8 @@ filetype on
 filetype indent on
 filetype plugin on
 
-
+" quickfix
+set switchbuf+=usetab,newtab
 
 
 
