@@ -41,10 +41,34 @@ nnoremap <Leader>/ :noh<cr>
 
 " grep
 " :nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 10<cr>
-:nnoremap <leader>q :copen<cr>
-:nnoremap <leader>Q :cclose<cr>
+":nnoremap <leader>q :copen<cr>
+":nnoremap <leader>Q :cclose<cr>
 :nnoremap <leader>c :cnext<cr>
 :nnoremap <leader>C :cprevious<cr>
+
+nnoremap <leader>q :silent call <SID>QuickfixToggle()<cr>
+
+function! s:QuickfixToggle()
+  let s:isopen = 0
+  for winnr in range(1, winnr('$'))
+    if getwinvar(winnr, '&syntax') ==# 'qf'
+      let s:isopen = 1
+    endif
+  endfor
+
+  if s:isopen
+    cclose
+  else
+    copen
+  endif
+endfunction
+
+
+
+
+
+
+
 
 
 
