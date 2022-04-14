@@ -27,6 +27,9 @@ nnoremap <Leader>l <C-w>l
 nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
 
+nnoremap <Leader>o o<Esc>
+
+
 inoremap <c-u> <esc>viwU
 nnoremap <c-u> viwU
 
