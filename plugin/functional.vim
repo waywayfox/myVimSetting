@@ -75,42 +75,28 @@ function! Removed(fn, l)
   return new_list
 endfunction
 
-
+"""
+" {param} fn       a funcref, if l is list, the function should have 3 parameters (accumulator, value, list),
+"                  if l is dictionary, the function should 4 parameters (accumulator, value, key, dict)
+" {param} l        Should be the list or dictionary
+" {param} init     The initial value of accumulator
+"
+"""
 function! Reduced(fn, l, init)
-  return 0
   let new_list = deepcopy(a:l)
-
   let accumulator = a:init
   if type(new_list) ==# v:t_list
-    call filter(new_list, '!' . string(a:fn) . '(v:val)')
-    for i in new_list
-      accumulator = a:fn(accumulator, i)
+    for value in new_list
+      let accumulator = a:fn(accumulator, value, new_list)
     endfor
 
-
-
-
   elseif type(new_list) ==# v:t_dict
-    call filter(new_list, '!' . string(a:fn) . '(v:key, v:val)')
-
-
-
-
+    for [key, value] in items(new_list)
+      let accumulator = a:fn(accumulator, value, key, new_list)
+    endfor
 
   endif
   return accumulator
 endfunction
-
-
-"function! GetAll(a,k,v,l)
-
-"endfunction
-
-
-
-
-
-
-
 
 
