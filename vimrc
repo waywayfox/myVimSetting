@@ -15,6 +15,9 @@ set autoindent
 set nowrap
 set showcmd
 set scrolloff=5
+set foldcolumn=2
+
+
 colorscheme gruvbox
 
 set background=dark
@@ -77,7 +80,7 @@ Plug 'tpope/vim-repeat'
 "Plug 'tomtom/tcomment_vim'
 Plug 'mileszs/ack.vim'
 
-
+Plug 'waywayfox/vim-wayway-potion'
 "Plug 'SirVer/ultisnips'
 "Plug 'mlaursen/vim-react-snippets'
 
