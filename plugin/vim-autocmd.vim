@@ -32,6 +32,8 @@ augroup filetype_sh
   autocmd!
   autocmd FileType sh :let maplocalleader='\\'
   autocmd FileType sh :nnoremap <buffer> <localleader>/ I# <esc>
+  autocmd FileType sh :vnoremap <buffer> <localleader>/ :normal! I# <esc>
+  autocmd FileType sh :nnoremap <buffer> <localleader>b I#!/bin/bash<esc>
   autocmd FileType sh :iabbrev iffi if [  ] ; then<CR><CR>fi<ESC>kk0f[l
 augroup END
 " }}}
