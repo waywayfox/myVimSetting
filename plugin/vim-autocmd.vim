@@ -27,6 +27,15 @@ augroup filetype_lua
 augroup END
 " }}}
 
+" FileType sh autogroup {{{
+augroup filetype_sh
+  autocmd!
+  autocmd FileType sh :let maplocalleader='\\'
+  autocmd FileType sh :nnoremap <buffer> <localleader>/ I# <esc>
+  autocmd FileType sh :iabbrev iffi if [  ] ; then<CR><CR>fi<ESC>kk0f[l
+augroup END
+" }}}
+
 " FileType Javascript autogroup {{{
 augroup filetype_javascript
   autocmd!
