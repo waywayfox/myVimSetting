@@ -34,7 +34,13 @@ augroup filetype_sh
   autocmd FileType sh :nnoremap <buffer> <localleader>/ I# <esc>
   autocmd FileType sh :vnoremap <buffer> <localleader>/ :normal! I# <esc>
   autocmd FileType sh :nnoremap <buffer> <localleader>b I#!/bin/bash<esc>
+  autocmd FileType sh :nnoremap <buffer> <localleader>op Iwhile getopts "w:" opt; do<CR>case $opt in<CR>w ) width="$OPTARG" ;;<CR>esac<CR>done<CR>shift $(( $OPTIND - 1 ))<esc>
   autocmd FileType sh :iabbrev iffi if [  ] ; then<CR><CR>fi<ESC>kk0f[l
+
+
+
+
+
 augroup END
 " }}}
 
