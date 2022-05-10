@@ -40,7 +40,6 @@ augroup filetype_sh
   autocmd FileType sh :inoremap <buffer> ' ''<Esc>i
   autocmd FileType sh :inoremap <buffer> ( ()<Esc>i
   autocmd FileType sh :inoremap <buffer> { {}<Esc>i
-  autocmd FileType sh :inoremap <buffer> [ [  ]<Esc>hi
 
 
 augroup END
