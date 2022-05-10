@@ -36,9 +36,11 @@ augroup filetype_sh
   autocmd FileType sh :nnoremap <buffer> <localleader>b I#!/bin/bash<esc>10o<esc>
   autocmd FileType sh :nnoremap <buffer> <localleader>op Iwhile getopts "w:" opt; do<CR>case $opt in<CR>w ) width="$OPTARG" ;;<CR>esac<CR>done<CR>shift $(( $OPTIND - 1 ))<esc>
   autocmd FileType sh :iabbrev iffi if [  ] ; then<CR><CR>fi<ESC>kk0f[l
-
-
-
+  autocmd FileType sh :inoremap <buffer> " ""<Esc>i
+  autocmd FileType sh :inoremap <buffer> ' ''<Esc>i
+  autocmd FileType sh :inoremap <buffer> ( ()<Esc>i
+  autocmd FileType sh :inoremap <buffer> { {}<Esc>i
+  autocmd FileType sh :inoremap <buffer> [ [  ]<Esc>hi
 
 
 augroup END
