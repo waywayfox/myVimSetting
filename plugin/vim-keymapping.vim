@@ -29,6 +29,11 @@ nnoremap <Leader>sv :source $MYVIMRC<cr>
 
 nnoremap <Leader>o o<Esc>
 
+" new tab and split
+nnoremap <Leader>nt :tabe
+nnoremap <Leader>ns :split
+nnoremap <Leader>nvs :vertical split
+
 
 inoremap <c-u> <esc>viwU
 nnoremap <c-u> viwU

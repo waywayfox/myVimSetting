@@ -49,6 +49,7 @@ augroup END
 augroup filetype_javascript
   autocmd!
   autocmd FileType javascript :let maplocalleader='_'
+  autocmd FileType javascript :set foldmethod=marker
   autocmd FileType javascript :nnoremap <buffer> <localleader>/ I//<esc>
   autocmd FileType javascript :vnoremap <buffer> <localleader>/ :normal! I// <esc>
   "react jsx comment
