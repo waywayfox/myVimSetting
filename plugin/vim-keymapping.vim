@@ -41,6 +41,9 @@ nnoremap <c-u> viwU
 " stop highlight
 nnoremap <Leader>/ :noh<cr>
 
+" redraw
+nnoremap <Leader>rd :redraw!<cr>
+
 
 " use very magic
 :nnoremap / /\v
@@ -71,6 +74,15 @@ function! s:QuickfixToggle()
   endif
 endfunction
 
+function FindFiles(filename)
+  let error_file = tempname()
+  silent exe '!find .-name"'.a:filename.'" | xargs file | sed "s/:/:1:/" >'.error_file
+  set errorformat=%f:%l%m
+  exe "cfile ". error_file
+  copen
+  call delete(error_file)
+endfunction
+command! -nargs=1 FindFile call FindFiles(<q-args>)
 
 
 
