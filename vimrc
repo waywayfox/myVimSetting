@@ -80,7 +80,10 @@ Plug 'tpope/vim-repeat'
 "Plug 'tomtom/tcomment_vim'
 Plug 'mileszs/ack.vim'
 
-Plug 'waywayfox/vim-wayway-potion'
+
+Plug 'junegunn/fzf'
+
+"Plug 'waywayfox/vim-wayway-potion'
 "Plug 'SirVer/ultisnips'
 "Plug 'mlaursen/vim-react-snippets'
 

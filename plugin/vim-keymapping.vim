@@ -24,6 +24,9 @@ nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 nnoremap <Leader>h <C-w>h
 nnoremap <Leader>l <C-w>l
+nnoremap <Leader>< <C-w><
+nnoremap <Leader>> <C-w>>
+
 nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
 
