@@ -17,6 +17,9 @@ set showcmd
 set scrolloff=5
 set foldcolumn=2
 
+set redrawtime=20000
+
+set regexpengine=0
 
 colorscheme gruvbox
 
@@ -82,6 +85,8 @@ Plug 'mileszs/ack.vim'
 
 
 Plug 'junegunn/fzf'
+
+Plug 'pangloss/vim-javascript'
 
 "Plug 'waywayfox/vim-wayway-potion'
 "Plug 'SirVer/ultisnips'
