@@ -56,13 +56,32 @@ augroup filetype_javascript
   autocmd FileType javascript :nnoremap <buffer> <localleader>r/ I{/**<esc>A**/}<esc>
   autocmd FileType javascript :vnoremap <buffer> <localleader>r/ I<CR><Up>{/***<esc>`>o***/}<esc>
 
-
-
-
  "react snippets"
-autocmd FileType javascript :iabbrev rce import { Component } from "react<esc>A;<CR><CR> export default class $CFN extends Component {<CR> constuctor(props) {<CR> super(props)<CR><CR> this.state = {}<CR> }<CR><CR> render() {<CR> return null<CR> }<CR> }
-autocmd FileType javascript :iabbrev rim import { Component } from "react<esc>A;<esc>
+  autocmd FileType javascript :iabbrev rce import { Component } from "react<esc>A;<CR><CR> export default class $CFN extends Component {<CR> constuctor(props) {<CR> super(props)<CR><CR> this.state = {}<CR> }<CR><CR> render() {<CR> return null<CR> }<CR> }
+  autocmd FileType javascript :iabbrev rim import { Component } from "react<esc>A;<esc>
+  " html tag
+  autocmd FileType html :inoremap </ </<C-X><C-O><C-X>
+
 
 augroup END
 " }}}
 
+" FileType HTML autogroup {{{
+augroup filetype_html
+  autocmd!
+  " html tag
+  autocmd FileType html :inoremap </ </<C-X><C-O><C-X>
+
+augroup END
+" }}}
+
+
+
+" FileType HTML autogroup {{{
+augroup filetype_html
+  autocmd!
+  " html tag
+  autocmd FileType css :iabbrev { {<CR><CR>}<ESC>ka
+
+augroup END
+" }}}
