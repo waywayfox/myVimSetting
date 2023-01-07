@@ -75,13 +75,27 @@ augroup filetype_html
 augroup END
 " }}}
 
-
-
-" FileType HTML autogroup {{{
+" FileType CSS autogroup {{{
 augroup filetype_html
   autocmd!
-  " html tag
   autocmd FileType css :iabbrev { {<CR><CR>}<ESC>ka
 
+augroup END
+" }}}
+
+" FileType Markdown autogroup {{{
+augroup filetype_markdown
+  autocmd!
+  autocmd FileType markdown :let maplocalleader='\\'
+  autocmd FileType markdown :nnoremap <buffer> <localleader>c I```<CR><CR>```<esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>b I** **<esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>1 I#<esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>2 I##<esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>3 I###<esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>4 I####<esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>5 I#####<esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>6 I######<esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>nl I1. <CR>2. <CR>3. <CR>4. <CR><esc>
+  autocmd FileType markdown :nnoremap <buffer> <localleader>ul I- <CR>- <CR>- <CR>- <CR><esc>
 augroup END
 " }}}
