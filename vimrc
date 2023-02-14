@@ -56,7 +56,9 @@ filetype plugin on
 " quickfix
 set switchbuf+=usetab,newtab
 
-
+" taglists
+let Tlist_Exit_OnlyWindow = 1
+noremap <F8> :TlistToggle<CR>
 
 
 call plug#begin()
