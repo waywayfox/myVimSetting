@@ -1,0 +1,17 @@
+snippet lf
+	local function ${1:fname}(${2:...})
+
+	end
+
+snippet pL
+	os.execute( string.format("echo '%s: %d' >/dev/ttyp0", "here", debug.getinfo(1).currentline))
+snippet pN
+	os.execute( string.format("echo 'aaa: %d' >/dev/ttyp0", aaa))
+snippet pS
+	os.execute( string.format("echo 'aaa: %s' >/dev/ttyp0", aaa))
+snippet pError
+	os.execute( string.format("echo 'error_code: %d' >/dev/ttyp0", error_code))
+snippet pT
+	for k, v in pairs() do,
+	  os.execute( string.format("echo '%s: %s' >/dev/ttyp0", k, tostring(v))),
+	end

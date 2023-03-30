@@ -1,6 +1,5 @@
 
 let mapleader = ","
-
 " basic
 set number
 set noshowmode
@@ -56,9 +55,8 @@ filetype plugin on
 " quickfix
 set switchbuf+=usetab,newtab
 
-" taglists
-let Tlist_Exit_OnlyWindow = 1
-noremap <F8> :TlistToggle<CR>
+" taglist
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 
 call plug#begin()
@@ -93,6 +91,19 @@ Plug 'pangloss/vim-javascript'
 "Plug 'waywayfox/vim-wayway-potion'
 "Plug 'SirVer/ultisnips'
 "Plug 'mlaursen/vim-react-snippets'
+
+"snipmate setup
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
+" Optional:
+Plug 'honza/vim-snippets'
+
+
+
+
+
 
 " Initialize plugin system
 call plug#end()
