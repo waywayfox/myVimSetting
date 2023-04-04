@@ -5,6 +5,7 @@ augroup basic_group
   autocmd WinLeave * setlocal nocursorline
   " %代表所有行，e代表不顯示錯誤。
   autocmd BufWritePre * :%s/\s\+$//e
+  vnoremap <leader>y "+y
 augroup END
 " }}}
 
