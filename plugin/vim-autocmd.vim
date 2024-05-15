@@ -20,6 +20,18 @@ augroup filetype_vim
 augroup END
 " }}}
 
+" FileType C autogroup {{{
+augroup filetype_c
+  autocmd!
+  autocmd FileType markdown :let maplocalleader='\\'
+  autocmd FileType c :inoremap <buffer> ;; <Esc>A;<Esc>
+  autocmd FileType c :inoremap <buffer> " ""<Esc>i
+  autocmd FileType c :inoremap <buffer> ' ''<Esc>i
+  autocmd FileType c :inoremap <buffer> ( ()<Esc>i
+  autocmd FileType c :inoremap <buffer> { {}<Esc>i
+augroup END
+" }}}
+
 " FileType LUA autogroup {{{
 augroup filetype_lua
   autocmd!
@@ -41,9 +53,8 @@ augroup filetype_sh
   autocmd FileType sh :inoremap <buffer> ' ''<Esc>i
   autocmd FileType sh :inoremap <buffer> ( ()<Esc>i
   autocmd FileType sh :inoremap <buffer> { {}<Esc>i
-
-
 augroup END
+
 " }}}
 
 " FileType Javascript autogroup {{{
@@ -57,7 +68,7 @@ augroup filetype_javascript
   autocmd FileType javascript :nnoremap <buffer> <localleader>r/ I{/**<esc>A**/}<esc>
   autocmd FileType javascript :vnoremap <buffer> <localleader>r/ I<CR><Up>{/***<esc>`>o***/}<esc>
 
- "react snippets"
+ "react snippets
   autocmd FileType javascript :iabbrev rce import { Component } from "react<esc>A;<CR><CR> export default class $CFN extends Component {<CR> constuctor(props) {<CR> super(props)<CR><CR> this.state = {}<CR> }<CR><CR> render() {<CR> return null<CR> }<CR> }
   autocmd FileType javascript :iabbrev rim import { Component } from "react<esc>A;<esc>
   " html tag

@@ -12,6 +12,22 @@ snippet pS
 snippet pError
 	os.execute( string.format("echo 'error_code: %d' >/dev/ttyp0", error_code))
 snippet pT
-	for k, v in pairs() do,
-	  os.execute( string.format("echo '%s: %s' >/dev/ttyp0", k, tostring(v))),
+	for k, v in pairs() do
+	  os.execute( string.format("echo '%s: %s' >/dev/ttyp0", k, tostring(v)))
+	end
+snippet ui32
+	local error_code
+	local value_p = OpEN.new_uint32_tp()
+	local value
+	error_code = OpEN.<openapi>(op.client, value_p)
+	if LUA_OPEN_E_NONE == error_code then
+	  value = OpEN.uint32_tp_value(value_p)
+	else
+	  response:update(ic[error_code], error_code)
+	end
+	OpEN.delete_uint32_tp(value_p)
+	return value
+snippet cht
+	if type(aaa) ~= "string" then
+	    response:update(ic[LUA_OPEN_E_PARAM], LUA_OPEN_E_PARAM)
 	end

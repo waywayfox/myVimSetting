@@ -1,4 +1,5 @@
 nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>tt :NERDTreeFind<CR>
 
 let NERDTreeChDirMode = 2
 let NERDTreeShowHidden = 1
@@ -17,3 +18,4 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 
 " Start NERDTree and leave the cursor in it.
 autocmd VimEnter * NERDTree
+

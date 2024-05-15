@@ -16,7 +16,7 @@ noremap <Right> <Nop>
 "inoremap [ []<Esc>i
 "inoremap {<CR> {<CR>}<Esc>ko<Tab>
 
-"leader"
+" leader
 noremap <Leader>p "+p
 " noremap <Leader>yy "+yy
 " noremap <Leader>y "+y
@@ -30,12 +30,14 @@ nnoremap <Leader>> <C-w>>
 nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
 
-nnoremap <Leader>o o<Esc>
+nnoremap <Leader>o O<Esc>
 
 " new tab and split
 nnoremap <Leader>nt :tabe
 nnoremap <Leader>ns :split
 nnoremap <Leader>nvs :vertical split
+
+nnoremap <Leader>mt :tabe %:p<cr>
 
 
 inoremap <c-u> <esc>viwU
@@ -51,7 +53,11 @@ nnoremap <Leader>rd :redraw!<cr>
 " use very magic
 :nnoremap / /\v
 
+" open new tab for tag
+:nnoremap <silent><Leader><C-]> <C-w><C-]><C-w>T
 
+" search at visual mode
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " grep
 " :nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 10<cr>

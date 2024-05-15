@@ -32,7 +32,7 @@ set expandtab
 set list
 set listchars=tab:>·,trail:~,extends:>,precedes:<,space:␣
 "eol:¬,
-
+"
 "search
 set hlsearch
 set ignorecase
@@ -84,7 +84,8 @@ Plug 'tpope/vim-repeat'
 Plug 'mileszs/ack.vim'
 
 
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'pangloss/vim-javascript'
 
